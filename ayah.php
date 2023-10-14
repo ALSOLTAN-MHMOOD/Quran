@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>Mhmood Alrusli</title>
+  <title>Mhmood-Alrusli</title>
 <style type="text/css">
 input[type="text"] {
   background-color: rgba(0, 0, 0, 0.3);
@@ -160,12 +160,12 @@ $ch = curl_init();
   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
   curl_setopt($ch, CURLOPT_ENCODING, 'gzip');
 $cc= curl_exec ($ch);
-$whisper=(json_decode($cc, true));
-$ayat=intval($whisper['data']['numberOfAyahs']);
+$mhmood=(json_decode($cc, true));
+$ayat=intval($mhmood['data']['numberOfAyahs']);
 $aya=rand(0,$ayat);
 $an=$aya+1;
-$ayah=$whisper['data']['ayahs'][$aya]['text'];
-$name=$whisper['data']['name'];
+$ayah=$mhmood['data']['ayahs'][$aya]['text'];
+$name=$mhmood['data']['name'];
 curl_close ($ch);
 echo "<font color='red' size='666'><bold>$name<br>";
 echo "<font color='red' size='666'><bold><hr>الآية $an";
